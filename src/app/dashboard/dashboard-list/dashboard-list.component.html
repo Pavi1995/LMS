@@ -1,0 +1,92 @@
+<head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <app-header></app-header>
+    <div class="row" #dashboard="ngModel">
+        <body class="w3-light-grey">
+            <!-- Page Container -->
+            <div class="w3-content w3-margin-top" style="max-width:1400px;">
+              <!-- The Grid -->
+              <div class="w3-row-padding">
+                <!-- Left Column -->
+                <div class="w3-third">
+                
+                  <div class="w3-white w3-text-grey w3-card-4">
+                    <div class="w3-display-container">
+                      <img src="" style="width:100%" alt="Avatar">
+                      <div class="w3-display-bottomleft w3-container w3-text-black">
+                        <h2>Firstname: {{ ctrl.firstname }}</h2>
+                        <h2>Lastname: {{ ctrl.lastname }}</h2>
+                      </div>
+                    </div>
+                    <div class="w3-container">
+                      <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>{{ ctrl.dateOfBirth }}</p>
+                      <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>{{ ctrl.role }}</p>
+                      <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>{{ ctrl.company }}</p>
+                      <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>{{ ctrl.employmentType }}</p>
+                      <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>{{ ctrl.gender }}</p>
+                      <hr>
+                    <br>
+                    </div>
+                  </div><br>
+                <!-- End Left Column -->
+                </div>
+            
+                <!-- Right Column -->
+                <div class="w3-twothird">
+                
+                 <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>My Gyst</h2>
+                    <div class="w3-container">
+                      <h5 class="w3-opacity"><b>{{ ctrl.address }}</b></h5>
+                      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span class="w3-tag w3-teal w3-round">Skills</span></h6>
+                      <p>{{ ctrl.skills }}</p>
+                      <p>{{ ctrl.yearsOfExperience }}</p>
+                      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span class="w3-tag w3-teal w3-round">Description</span></h6>
+                      <p>{{ ctrl.description }}</p>
+                      <hr>
+                    </div>
+                 </div>
+            
+                 <div class="w3-container w3-card w3-white">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+                    <div class="w3-container">
+                      <h5 class="w3-opacity"><b>{{ ctrl.qualification }}</b></h5>
+                      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Employment Type</h6>
+                      <p>{{ ctrl.employmentType }}</p>
+                      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Current Salary</h6>
+                      <p>{{ ctrl.currentSalary }}</p>                      
+                      <hr>
+                    </div>
+                  </div>
+                <!-- End Right Column -->
+                </div> 
+              <!-- End Grid -->
+              </div>
+              <!-- End Page Container -->
+            </div>
+    </div>
+  
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  

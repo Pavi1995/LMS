@@ -26,7 +26,9 @@ import { AuthInterceptor } from "./auth/auth-interceptor";
 import { ErrorInterceptor } from "./error-interceptor";
 import { ErrorComponent } from "./error/error.component";
 import { AngularMaterialModule } from "./angular-material.module";
+import { CoursesListComponent } from "./dashboard/courses/courses-list/courses-list.component";
 //import { PostsModule } from "./posts/posts.module";
+import { CourseService } from "./dashboard/courses/courses.service"
 
 @NgModule({
   declarations: [
@@ -50,7 +52,7 @@ import { AngularMaterialModule } from "./angular-material.module";
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

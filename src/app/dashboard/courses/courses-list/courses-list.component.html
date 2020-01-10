@@ -1,0 +1,19 @@
+<mat-accordian multi="true" *ngIf="courses.length > 0">
+  <mat-expansion-panel *ngFor="let course of courses">
+    <mat-expansion-panel-header>
+    <p>{{ course.projectid }}</p> 
+    </mat-expansion-panel-header>
+    <p>{{ course.title }}</p>
+    </mat-expansion-panel-header>
+    <p>{{ course.projectDescription }}</p>
+    </mat-expansion-panel-header>
+    <p>{{ course.assigne }}</p>
+    </mat-expansion-panel-header>
+    <p>{{ course.createdOn }}</p>
+    <mat-action-row>
+      <button mat-button color="primary">EDIT</button>
+      <button mat-button color="warm">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordian>
+<p class="info-text mat-body-1" *ngIf="courses.length <= 0">No Courses Added Yet!!!</p>
