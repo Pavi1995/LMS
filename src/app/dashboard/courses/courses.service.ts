@@ -36,6 +36,10 @@ export class CourseService{
                   assigne: assigne,
                   createdOn: createdOn
               };
+              this.http.post<{message: string}>('http://localhost:3000/api/courses', project)
+              .subscribe((responseData) => {
+                console.log(responseData.message);
+              });
               this.course.push(project);  
               this.courseUpdated.next();
     }
