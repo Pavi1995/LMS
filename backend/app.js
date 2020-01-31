@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const courseRoutes = require('./routes/courses');
+
 
 const Project = require('./models/project');
 mongoose.connect("mongodb+srv://Pavithran:1Mo4GYJr1cVFpbBL@cluster0-e51ly.mongodb.net/test?retryWrites=true&w=majority")
@@ -11,7 +13,8 @@ mongoose.connect("mongodb+srv://Pavithran:1Mo4GYJr1cVFpbBL@cluster0-e51ly.mongod
   .catch(() => {
     console.log(`Connection failed`);
   });
-
+ 
+app.use("/api/courses", courseRoutes);  
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/images", express.static(path.join("backend/images")));
@@ -33,19 +36,6 @@ app.use((req, resp, next) => {
 
 //mongodb+srv://Pavithran:<password>@cluster0-e51ly.mongodb.net/test?retryWrites=true&w=majority
 
-app.post("/api/coursepost", (req, res, next) => {
-  const course = new Project({
-    title: req.body.title,
-    projectDescription: req.body.projectDescription,
-    assigne: req.body.assigne,
-    createdOn: req.body.createdOn
-  });
-  console.log(course);
-  res.status(201).json({
-    message: 'Post Added successfully'
-  });
-  //next();  
-});
 
 app.use("/api/login", (req, resp, next) => {
   const login = [{}];
