@@ -9,7 +9,8 @@ import {
   MatCardModule,
   MatButtonModule,
   MatToolbarModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatProgressSpinnerModule
 } from "@angular/material";
 
 //import { ErrorStateMatcher } from "@angular/material/core";
@@ -29,6 +30,7 @@ import { AngularMaterialModule } from "./angular-material.module";
 import { CoursesListComponent } from "./dashboard/courses/courses-list/courses-list.component";
 //import { PostsModule } from "./posts/posts.module";
 import { CourseService } from "./dashboard/courses/courses.service"
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { CourseService } from "./dashboard/courses/courses.service"
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -50,7 +53,8 @@ import { CourseService } from "./dashboard/courses/courses.service"
     MatToolbarModule,
     MatExpansionModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]

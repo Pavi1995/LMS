@@ -1,4 +1,8 @@
 import { Component, OnInit } from "@angular/core";
+import { Subscription } from 'rxjs';
+
+import { Project } from "../../../shared/project.model";
+import { CourseService } from "../courses.service";
 
 @Component({
     selector: 'courses-edit',
@@ -7,8 +11,12 @@ import { Component, OnInit } from "@angular/core";
 
 export class CoursesEditComponent implements OnInit {
      
+
     courses = [];
-    constructor(){}
+    constructor(public courseservice: CourseService){}
      ngOnInit(){}
 
+     onDelete(courseId: string){
+        this.courseservice.deleteCourse(courseId);
+     }
 }

@@ -33,10 +33,16 @@
     </div>  
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Edit Course</button>
+        <a mat-button color="primary" [routerLink]="['/edit', course.id]">EDIT COURSE</a>
+        <!--<button type="submit" class="btn btn-default">Edit Course</button>-->
       </div>
     </div>
-  </form>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" (click)="onDelete(course.id)">Delete Course</button>
+      </div>
+    </div>
+   </form>
 </div>
 
 </body>
